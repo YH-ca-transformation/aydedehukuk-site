@@ -9,6 +9,12 @@ Amaç     : Sitede yapılan tüm değişikliklerin kronolojik kaydı.
 2026-07-11
 ----------
 
+[Bakım] CHANGELOG takip düzeni  (PR #5)
+  - "Bundan sonra her değişiklik CHANGELOG.txt'e işlenir" kuralı yazıldı
+  - Bekleyen işler bölümü koddaki gerçek yarım işlerle genişletildi:
+    hero "XX" istatistikleri, hakkımızda/ana sayfa portre placeholder'ları,
+    gönderim yapmayan iletişim formu
+
 [Performans] Hero arka plan görseli optimize edildi  (PR #4)
   - assets/mert-aydede-background : PNG (1.59 MB) -> JPEG q82 (183 KB), ~%88 küçülme
   - Görsel kalitesi birebir korundu; sayfa ilk yükleme hızı arttı
@@ -59,15 +65,39 @@ Amaç     : Sitede yapılan tüm değişikliklerin kronolojik kaydı.
 
 BEKLEYEN / SIRADAKİ İŞLER
 -------------------------
-  - Kurumsal proxy: şirket ağında sitenin açılması için IT'den allowlist talebi
-    (site dışı, ağ politikası konusu)
-  - (Opsiyonel) Hero görseli için WebP sürümü (cwebp/ImageMagick kurulumu gerekir)
-  - (Planlı) İletişim sayfasına Google Maps iframe embed (bkz. DEPLOYMENT_PLAN.md)
+Durum işaretleri:  [ ] başlanmadı   [~] devam ediyor   [x] tamamlandı (dated
+girdiye taşınır).  Bir madde bittiğinde yukarıdaki tarihli bölüme taşıyın.
+
+İçerik / Eksik veriler
+  [ ] Hero istatistik kutuları: "XX" yerine gerçek rakamlar
+      (Yıllık Deneyim / Sonuçlanan Dava / Uzmanlık Alanı / Müvekkil Memnuniyeti)
+      -> index.html
+  [ ] Hakkımızda sayfası portresi: "MERT AYDEDE PORTRE" placeholder yerine
+      gerçek görsel -> hakkimizda.html
+  [ ] Ana sayfa "OFİS / PORTRE" placeholder alanı: gerçek görsel
+      -> index.html (hakkımızda bölümü)
+
+Fonksiyonel
+  [ ] İletişim formu şu an gönderim YAPMIYOR (backend yok). Form gönderimi için
+      bir çözüm (ör. Formspree, e-posta servisi) -> iletisim.html
+  [ ] İletişim sayfasına Google Maps iframe embed (bkz. DEPLOYMENT_PLAN.md)
+
+Altyapı / Ortam
+  [ ] Kurumsal proxy: şirket ağında sitenin açılması için IT'den allowlist
+      talebi (site dışı, ağ politikası konusu)
+
+Opsiyonel / İyileştirme
+  [ ] Hero görseli için WebP sürümü (cwebp veya ImageMagick kurulumu gerekir)
 
 
 NASIL GÜNCELLENİR
 -----------------
-Her yeni değişiklikte en üste kısa bir madde ekleyin:
-  [Kategori] açıklama  (PR #numara)
-Kategoriler: [İçerik] [Tasarım] [Performans] [Bakım] [Altyapı] [Hata Düzeltme]
-Yeni bir güne geçildiğinde yeni bir "YYYY-AA-GG" tarih başlığı açın.
+Kural: BUNDAN SONRA HER DEĞİŞİKLİK bu dosyaya işlenir; değişikliği yapan PR,
+CHANGELOG.txt güncellemesini de AYNI commit içinde içerir.
+
+- Tamamlanan iş  -> en üste, güncel tarih başlığı altına kısa madde:
+    [Kategori] açıklama  (PR #numara)
+  Kategoriler: [İçerik] [Tasarım] [Performans] [Bakım] [Altyapı] [Hata Düzeltme]
+- Yeni güne geçilince yeni bir "YYYY-AA-GG" tarih başlığı açın.
+- Planlanan/yarım iş -> "BEKLEYEN / SIRADAKİ İŞLER" bölümüne [ ] ile ekleyin;
+  bittiğinde [x] yapıp tarihli bölüme taşıyın.

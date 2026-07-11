@@ -44,3 +44,54 @@ Add these records in GoDaddy:
 - The site will use the custom domain aydedehukuk.com.
 - The repository already contains the CNAME file for the apex domain.
 - Once GoDaddy DNS is configured, GitHub Pages will verify and serve the site.
+
+## 7. Ongoing change management workflow
+Use the repository as the single source of truth for all future updates.
+
+### 7.1 Recommended working method
+1. Create a branch for each change set, for example:
+   - feature/design-tweak
+   - feature/maps-integration
+   - content/hero-copy-update
+2. Make edits locally in the relevant files.
+3. Preview the changes locally before publishing.
+4. Commit with a clear message.
+5. Push the branch to GitHub.
+6. Open a pull request and merge to main when ready.
+7. GitHub Pages will deploy automatically after merge.
+
+### 7.2 Where each type of change goes
+- Small visual or cosmetic updates:
+  - edit [styles.css](styles.css)
+  - add or replace images under [assets/brand](assets/brand) or a future assets/images folder
+- Text and content updates:
+  - edit [index.html](index.html), [hakkimizda.html](hakkimizda.html), [hizmetler.html](hizmetler.html), or [iletisim.html](iletisim.html)
+- Small interactivity or page behavior:
+  - edit [script.js](script.js)
+- Google Maps integration:
+  - add the embed or map code in [iletisim.html](iletisim.html)
+
+### 7.3 Safe deployment rule
+- Do not make direct production updates on main unless the change is trivial and already tested locally.
+- Keep main always deployable.
+- Use pull requests for review even for small changes.
+
+## 8. Google Maps integration plan
+For this site, the healthiest approach is a lightweight embedded map.
+
+### 8.1 Recommended option
+- Use a simple Google Maps embed iframe in [iletisim.html](iletisim.html).
+- This requires no API key, works well on GitHub Pages, and is easy to maintain.
+
+### 8.2 When to use a more advanced map
+If you later want features such as custom markers, interactive zoom, or directions, we can add a JavaScript-based Google Maps implementation.
+- Keep the API key out of the public repository if possible.
+- For a static site on GitHub Pages, a serverless proxy or backend would be the safer long-term approach.
+
+## 9. Maintenance checklist for each update
+Before publishing, verify:
+- local preview looks correct
+- links still work
+- the page is responsive on mobile
+- the deployment workflow finishes successfully on GitHub
+- the custom domain still serves the latest version

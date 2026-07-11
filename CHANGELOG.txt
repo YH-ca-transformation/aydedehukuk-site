@@ -9,6 +9,13 @@ Amaç     : Sitede yapılan tüm değişikliklerin kronolojik kaydı.
 2026-07-11
 ----------
 
+[Altyapı] Makine-okunur veri: JSON-LD + llms.txt  (PR #7)
+  - Tüm sayfaların <head>'ine Schema.org "Attorney" tipinde JSON-LD eklendi:
+    ad, adres, telefon, e-posta (+ alternatif), KEP, İzmir Barosu sicil no
+    19573, çalışma saatleri ve çalışma alanları. Görünümü değiştirmez.
+  - Kök dizine llms.txt eklendi (AI ajanları için markdown site/iletişim özeti)
+  - Amaç: arama motorları ve AI ajanları/MCP'lerin bilgileri güvenilir okuması
+
 [Bakım] CHANGELOG takip düzeni  (PR #5)
   - "Bundan sonra her değişiklik CHANGELOG.txt'e işlenir" kuralı yazıldı
   - Bekleyen işler bölümü koddaki gerçek yarım işlerle genişletildi:

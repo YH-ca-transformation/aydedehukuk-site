@@ -4,57 +4,135 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>İletişim | Aydede Hukuk Bürosu</title>
-    <meta name="description" content="Aydede Hukuk Bürosu ile iletişime geçmek için telefon, e-posta ve form bilgileri." />
+    <meta name="description" content="Aydede Hukuk Bürosu ile iletişim kurmak için randevu formu ve iletişim bilgileri." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Marcellus&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="container nav-bar">
-        <a class="brand" href="index.html">
-          <img src="assets/brand/logo-full.png" alt="Aydede Hukuk Bürosu" />
-        </a>
-        <nav class="nav-links" aria-label="Ana navigasyon">
-          <a href="index.html">Ana Sayfa</a>
-          <a href="hakkimizda.html">Hakkımızda</a>
-          <a href="hizmetler.html">Hizmetler</a>
-          <a href="iletisim.html" class="active">İletişim</a>
-        </nav>
+    <div class="page-shell">
+      <div class="utility-bar">
+        <div class="utility-links">
+          <span class="accent-text">✆ +90 (212) 000 00 00</span>
+          <span>info@aydedehukuk.com</span>
+        </div>
+        <div class="utility-languages">
+          <span class="accent-text">TR</span>
+          <span class="separator">|</span>
+          <span>EN</span>
+        </div>
       </div>
-    </header>
 
-    <main class="page-content">
-      <section class="container page-header">
-        <p class="section-label">İletişim</p>
-        <h1>Hukuki desteğe hemen ulaşın.</h1>
-      </section>
+      <header class="main-header">
+        <div class="container nav-bar">
+          <a class="brand" href="index.html">
+            <img src="assets/brand/logo-mark-t.png" alt="Aydede Hukuk Bürosu" />
+          </a>
+          <nav class="nav-links" aria-label="Ana navigasyon">
+            <a href="index.html">Anasayfa</a>
+            <a href="hakkimizda.html">Hakkımızda</a>
+            <a href="hizmetler.html">Hizmetler</a>
+            <a href="iletisim.html" class="contact-pill active">İletişim</a>
+          </nav>
+        </div>
+      </header>
 
-      <section class="container contact-grid">
-        <article class="contact-card">
-          <h3>İletişim bilgileri</h3>
-          <p><strong>Telefon:</strong> +90 212 000 00 00</p>
-          <p><strong>E-posta:</strong> info@aydedehukuk.com</p>
-          <p><strong>Adres:</strong> İstanbul, Türkiye</p>
-        </article>
+      <main>
+        <section class="page-hero">
+          <div class="container">
+            <p class="section-kicker">İLETİŞİM</p>
+            <h1>Bize Ulaşın</h1>
+            <div class="divider center"></div>
+          </div>
+        </section>
 
-        <article class="contact-card">
-          <h3>İletişim formu</h3>
-          <form class="contact-form">
-            <input type="text" placeholder="Adınız Soyadınız" />
-            <input type="email" placeholder="E-posta adresiniz" />
-            <input type="tel" placeholder="Telefon numaranız" />
-            <textarea rows="5" placeholder="Talebiniz hakkında kısa bilgi"></textarea>
-            <button type="submit">Gönder</button>
-          </form>
-        </article>
-      </section>
-    </main>
+        <section class="section">
+          <div class="container contact-layout">
+            <div class="contact-form-card">
+              <h2>Randevu Talebi</h2>
+              <p>Bilgilerinizi bırakın; en kısa sürede size dönüş yapalım.</p>
+              <form class="contact-form">
+                <div class="form-row">
+                  <label for="name">Ad Soyad</label>
+                  <input id="name" type="text" placeholder="Adınız Soyadınız" />
+                </div>
+                <div class="form-row">
+                  <label for="phone">Telefon</label>
+                  <input id="phone" type="tel" placeholder="+90 (5xx) xxx xx xx" />
+                </div>
+                <div class="form-row">
+                  <label for="email">E-posta</label>
+                  <input id="email" type="email" placeholder="ornek@eposta.com" />
+                </div>
+                <div class="form-row">
+                  <label for="subject">Konu</label>
+                  <input id="subject" type="text" placeholder="Örn. Gayrimenkul uyuşmazlığı" />
+                </div>
+                <div class="form-row">
+                  <label for="message">Mesajınız</label>
+                  <textarea id="message" rows="4" placeholder="Dosyanızı kısaca açıklayın"></textarea>
+                </div>
+                <button type="submit">Talebi Gönder</button>
+              </form>
+            </div>
 
-    <footer class="site-footer">
-      <div class="container footer-row">
-        <p>© <span id="year"></span> Aydede Hukuk Bürosu</p>
-        <a href="iletisim.html">İletişim</a>
-      </div>
-    </footer>
+            <div class="contact-info-card">
+              <p class="section-kicker">İLETİŞİM BİLGİLERİ</p>
+              <div class="info-block">
+                <h3>Adres</h3>
+                <p>Levent Mahallesi, İstanbul</p>
+              </div>
+              <div class="info-block">
+                <h3>Telefon</h3>
+                <p>+90 (212) 000 00 00</p>
+              </div>
+              <div class="info-block">
+                <h3>E-posta</h3>
+                <p>info@aydedehukuk.com</p>
+              </div>
+              <div class="info-block">
+                <h3>Çalışma Saatleri</h3>
+                <p>Pazartesi – Cumartesi, 09:00 – 18:00</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-grid">
+          <div>
+            <img src="assets/brand/logo-primary-t.png" alt="Aydede Hukuk Bürosu" class="footer-logo" />
+            <p>İlkeli, sonuç odaklı ve gizlilik esaslı hukuki danışmanlık.</p>
+          </div>
+          <div>
+            <h3>Menü</h3>
+            <a href="index.html">Anasayfa</a>
+            <a href="hakkimizda.html">Hakkımızda</a>
+            <a href="hizmetler.html">Hizmetler</a>
+            <a href="iletisim.html">İletişim</a>
+          </div>
+          <div>
+            <h3>Alanlar</h3>
+            <span>Gayrimenkul</span>
+            <span>İş Hukuku</span>
+            <span>Ceza Hukuku</span>
+            <span>Aile Hukuku</span>
+          </div>
+          <div>
+            <h3>İletişim</h3>
+            <span>+90 (212) 000 00 00</span>
+            <span>info@aydedehukuk.com</span>
+            <span>Levent, İstanbul</span>
+          </div>
+        </div>
+        <div class="container footer-bottom">
+          <span>© <span id="year"></span> Aydede Hukuk Bürosu</span>
+          <span>Bu site bir reklam niteliği taşımaz.</span>
+        </div>
+      </footer>
+    </div>
 
     <script src="script.js"></script>
   </body>

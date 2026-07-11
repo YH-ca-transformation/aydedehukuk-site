@@ -31,3 +31,20 @@ if (lawyerModal && lawyerModalTrigger) {
     }
   });
 }
+
+// Mobile navigation toggle (hamburger)
+const navToggle = document.querySelector('.nav-toggle');
+const primaryNav = document.getElementById('primaryNav');
+if (navToggle && primaryNav) {
+  const setOpen = (open) => {
+    primaryNav.classList.toggle('open', open);
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  };
+  navToggle.addEventListener('click', () => {
+    setOpen(!primaryNav.classList.contains('open'));
+  });
+  // Close the menu after tapping a link
+  primaryNav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setOpen(false));
+  });
+}

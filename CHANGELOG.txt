@@ -9,6 +9,15 @@ Amaç     : Sitede yapılan tüm değişikliklerin kronolojik kaydı.
 2026-07-11
 ----------
 
+[Tasarım] Mobil iyileştirmeler  (PR #6)
+  - Mobil hamburger menü (☰) eklendi (script.js + hidden-on-desktop buton)
+  - Header kelime markası mobilde küçültüldü (yatay taşma önlendi)
+  - Menü linklerinde dokunma hedefleri >=44px
+  - İletişim formu input font-size 16px (iOS otomatik zoom önlendi)
+  - Hero portresi mobilde: soluk arka plan yerine yazının altında net, tam
+    genişlik foto bloğu olarak gösteriliyor (arka plan görseli mobilde kaldırıldı)
+  - Tüm değişiklikler @media (max-width) içinde; MASAÜSTÜ GÖRÜNÜMÜ DEĞİŞMEDİ
+
 [Bakım] CHANGELOG takip düzeni  (PR #5)
   - "Bundan sonra her değişiklik CHANGELOG.txt'e işlenir" kuralı yazıldı
   - Bekleyen işler bölümü koddaki gerçek yarım işlerle genişletildi:

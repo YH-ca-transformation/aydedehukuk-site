@@ -41,16 +41,16 @@ img {
 }
 
 .page-shell {
-  width: min(1280px, calc(100% - 2rem));
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
   background: #faf7f1;
-  box-shadow: 0 0 60px -30px rgba(0, 0, 0, 0.3);
   overflow: hidden;
 }
 
 .container {
-  width: min(1180px, calc(100% - 2.75rem));
+  width: min(1280px, 100%);
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .utility-bar {
@@ -59,7 +59,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 44px;
+  padding: 10px 2rem;
   font-size: 12.5px;
   letter-spacing: 0.3px;
 }
@@ -137,7 +137,7 @@ img {
 }
 
 .hero-copy {
-  padding: 82px 56px 82px 44px;
+  padding: 82px 2rem 82px 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -359,7 +359,7 @@ h2 {
 }
 
 .about-copy {
-  padding: 80px 56px;
+  padding: 80px 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;

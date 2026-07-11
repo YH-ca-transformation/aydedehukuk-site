@@ -3,46 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Claude Design Sitesi</title>
-    <meta name="description" content="GitHub Pages üzerinde yayınlanmaya hazır statik site." />
+    <title>Aydede Hukuk Bürosu | Ana Sayfa</title>
+    <meta name="description" content="Aydede Hukuk Bürosu için hazırlanmış modern ve profesyonel statik web sitesi." />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="hero">
-      <div class="container">
-        <p class="eyebrow">GitHub Pages</p>
-        <h1>Site artık yayınlanmaya hazır.</h1>
-        <p class="lead">
-          Bu kurulum, Claude Design ile hazırladığınız statik siteyi GitHub Pages üzerinden hızlıca sunmanızı sağlar.
-        </p>
-        <a class="button" href="#hakkinda">Detayları Gör</a>
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a class="brand" href="index.html">
+          <img src="assets/brand/logo-full.png" alt="Aydede Hukuk Bürosu" />
+        </a>
+        <nav class="nav-links" aria-label="Ana navigasyon">
+          <a href="index.html" class="active">Ana Sayfa</a>
+          <a href="hakkimizda.html">Hakkımızda</a>
+          <a href="hizmetler.html">Hizmetler</a>
+          <a href="iletisim.html">İletişim</a>
+        </nav>
+      </div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Aydede Hukuk Bürosu</p>
+          <h1>İş ve özel hayatınız için güçlü hukuki destek.</h1>
+          <p class="lead">
+            Müşterilerimize anlaşmazlıklarda çözüm, işlemlerde güven ve gelecekte koruma sağlayan hızlı, şeffaf ve stratejik hukuk hizmetleri sunuyoruz.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="iletisim.html">Randevu Alın</a>
+            <a class="button secondary" href="hizmetler.html">Hizmetlerimiz</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <h2>Öne çıkan alanlar</h2>
+          <ul>
+            <li>İş ve şirket hukuku</li>
+            <li>İcra ve ihtilaf çözümü</li>
+            <li>Aile ve miras davaları</li>
+            <li>Kurumsal danışmanlık</li>
+          </ul>
+        </div>
       </div>
     </header>
 
-    <main id="hakkinda">
+    <main>
       <section class="section">
-        <div class="container grid">
+        <div class="container intro-grid">
           <div>
-            <h2>Ne yaptık?</h2>
+            <p class="section-label">Neden bizi tercih etmelisiniz?</p>
+            <h2>Her adımda hukuki güvence ve profesyonel yaklaşım.</h2>
             <p>
-              Bu proje, GitHub Pages için gerekli temel yapıyı içerir. Sitenizi bir GitHub deposuna yükledikten sonra otomatik olarak yayınlanır.
+              Deneyimli kadromuz, karmaşık hukuki süreçleri anlaşılır hale getirir, riskleri öngörür ve müvekkillerimizin haklarını en iyi şekilde savunur.
             </p>
           </div>
-          <div class="card">
-            <h3>Hazır olanlar</h3>
-            <ul>
-              <li>Statik ana sayfa</li>
-              <li>GitHub Pages deploy workflow</li>
-              <li>Yerel önizleme için basit yapı</li>
-            </ul>
+          <div class="info-card">
+            <h3>Hızlı erişim</h3>
+            <p>İhtiyaç duyduğunuzda doğru değerlendirme ve doğrudan iletişim sağlıyoruz.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-label">Hizmetlerimiz</p>
+            <h2>Geniş yelpaze ile hukuki çözüm.</h2>
+          </div>
+          <div class="card-grid">
+            <article class="card">
+              <h3>Şirket ve Ticaret</h3>
+              <p>Kuruluş süreçlerinden sözleşme ve uyuşmazlık yönetimine kadar kapsamlı destek.</p>
+            </article>
+            <article class="card">
+              <h3>Aile Hukuku</h3>
+              <p>Boşanma, velayet, mal paylaşımı ve miras süreçlerinde profesyonel rehberlik.</p>
+            </article>
+            <article class="card">
+              <h3>İcra ve İflas</h3>
+              <p>Alacak takibi, icra süreçleri ve ihtilafların etkin çözüm yolları.</p>
+            </article>
           </div>
         </div>
       </section>
     </main>
 
-    <footer>
-      <div class="container">
-        <p>© <span id="year"></span> Claude Design</p>
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <p>© <span id="year"></span> Aydede Hukuk Bürosu</p>
+        <a href="iletisim.html">İletişim</a>
       </div>
     </footer>
 

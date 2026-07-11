@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&amp;family=Marcellus&amp;family=Mulish:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#faf7f1;font-family:'Mulish',system-ui,sans-serif}
+  a{color:inherit;text-decoration:none}
+  *{box-sizing:border-box}
+  input,textarea{font-family:'Mulish',sans-serif}
+</style>
+</helmet>
+
+<div style="width:100%;max-width:1280px;margin:0 auto;{{ themeStyle }}background:#faf7f1;color:#241a1b;overflow:hidden;box-shadow:0 0 60px -30px rgba(0,0,0,.3)">
+
+  <!-- ============ UTILITY BAR ============ -->
+  <div style="background:var(--deepA, #59100d);color:#f0e2cf;display:flex;justify-content:space-between;align-items:center;padding:9px 44px;font-size:12.5px;letter-spacing:.3px">
+    <span style="display:flex;gap:24px;align-items:center"><span style="color:var(--acc2, #ecc873)">✆ +90 (212) 000 00 00</span><span style="opacity:.8">info@aydedehukuk.com</span></span>
+    <span style="display:flex;gap:14px;align-items:center"><span style="color:#fff;font-weight:600">TR</span><span style="opacity:.4">|</span><span style="opacity:.6">EN</span></span>
+  </div>
+
+  <!-- ============ MAIN NAV ============ -->
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:18px 44px;border-bottom:1px solid rgba(89,16,13,.14);background:#faf7f1;position:sticky;top:0;z-index:20">
+    <a onClick="{{ goHome }}" style="cursor:pointer"><img src="assets/logo-mark-t.png" alt="Aydede Hukuk Bürosu" style="height:50px;display:block"></a>
+    <nav style="display:flex;gap:30px;align-items:center;font-family:'Marcellus',serif;font-size:15px;letter-spacing:.5px;color:#3a2b28">
+      <a onClick="{{ goHome }}" style="cursor:pointer;padding-bottom:3px;{{ aHome }}">Anasayfa</a>
+      <a onClick="{{ goAbout }}" style="cursor:pointer;padding-bottom:3px;{{ aAbout }}">Hakkımızda</a>
+      <a onClick="{{ goAreas }}" style="cursor:pointer;padding-bottom:3px;{{ aAreas }}">Çalışma Alanları</a>
+      <a onClick="{{ goContact }}" style="cursor:pointer;border:1.5px solid var(--acc, #d0a03c);color:var(--deep, #7a1620);padding:9px 20px;border-radius:2px;font-size:13px">İLETİŞİM</a>
+    </nav>
+  </div>
+
+  <!-- ============================================================= -->
+  <!-- ANASAYFA -->
+  <!-- ============================================================= -->
+  <sc-if value="{{ showHome }}" hint-placeholder-val="{{ true }}">
+  <div data-screen-label="Anasayfa">
+
+    <!-- hero -->
+    <div style="display:grid;grid-template-columns:1.05fr .95fr;gap:0">
+      <div style="padding:82px 56px 82px 44px;display:flex;flex-direction:column;justify-content:center">
+        <div style="font-family:'Marcellus',serif;letter-spacing:3px;font-size:13px;color:var(--acc, #d0a03c);margin-bottom:22px">AVUKAT MERT AYDEDE</div>
+        <h1 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:58px;line-height:1.08;margin:0 0 22px;color:#241a1b;letter-spacing:.3px">Hukukta güven,<br>deneyim ve<br><span style="color:var(--deep, #7a1620);font-style:italic">titizlik.</span></h1>
+        <div style="width:56px;height:2px;background:var(--acc, #d0a03c);margin:0 0 22px"></div>
+        <p style="font-size:15.5px;line-height:1.8;color:#4d3f39;max-width:440px;margin:0 0 32px">Bireysel ve kurumsal müvekkillerimize gayrimenkul, iş, ceza ve aile hukuku alanlarında ilkeli, sonuç odaklı ve gizlilik esaslı hukuki danışmanlık sunuyoruz.</p>
+        <div style="display:flex;gap:14px">
+          <a onClick="{{ goContact }}" style="cursor:pointer;background:var(--deep, #7a1620);color:#fff;padding:15px 30px;font-family:'Marcellus',serif;letter-spacing:.8px;font-size:14px">RANDEVU TALEBİ İÇİN TIKLAYIN<br></a>
+          <a onClick="{{ goAreas }}" style="cursor:pointer;border:1.5px solid #241a1b;padding:15px 28px;font-family:'Marcellus',serif;letter-spacing:.8px;font-size:14px">ÇALIŞMA ALANLARI</a>
+        </div>
+      </div>
+      <div style="position:relative;background:repeating-linear-gradient(135deg,#efe9dd 0 14px,#e6dece 14px 28px);min-height:560px;border-left:1px solid rgba(89,16,13,.1)">
+        <div style="position:absolute;inset:26px;border:1px solid var(--acc, #d0a03c)"></div>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:ui-monospace,monospace;font-size:12px;color:#8a7a63;letter-spacing:1px">AVUKAT PORTRE FOTOĞRAFI</div>
+      </div>
+    </div>
+
+    <!-- trust stats -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);background:var(--deepA, #59100d);color:#f3e6d3">
+      <div style="padding:34px 30px;border-right:1px solid rgba(255,255,255,.1)"><div style="font-family:'Cormorant Garamond',serif;font-size:44px;color:var(--acc2, #ecc873);line-height:1">XX</div><div style="font-size:12.5px;letter-spacing:.5px;margin-top:4px;opacity:.85">Yıllık Deneyim</div></div>
+      <div style="padding:34px 30px;border-right:1px solid rgba(255,255,255,.1)"><div style="font-family:'Cormorant Garamond',serif;font-size:44px;color:var(--acc2, #ecc873);line-height:1">XX</div><div style="font-size:12.5px;letter-spacing:.5px;margin-top:4px;opacity:.85">Sonuçlanan Dava</div></div>
+      <div style="padding:34px 30px;border-right:1px solid rgba(255,255,255,.1)"><div style="font-family:'Cormorant Garamond',serif;font-size:44px;color:var(--acc2, #ecc873);line-height:1">XX</div><div style="font-size:12.5px;letter-spacing:.5px;margin-top:4px;opacity:.85">Uzmanlık Alanı</div></div>
+      <div style="padding:34px 30px"><div style="font-family:'Cormorant Garamond',serif;font-size:44px;color:var(--acc2, #ecc873);line-height:1">XX</div><div style="font-size:12.5px;letter-spacing:.5px;margin-top:4px;opacity:.85">Müvekkil Memnuniyeti</div></div>
+    </div>
+
+    <!-- practice areas -->
+    <div style="padding:84px 44px;background:#faf7f1;text-align:center">
+      <div style="font-family:'Marcellus',serif;letter-spacing:3px;font-size:13px;color:var(--acc, #d0a03c);margin-bottom:14px">ÇALIŞMA ALANLARI</div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:40px;margin:0 0 8px;color:#241a1b">Uzmanlık Alanlarımız</h2>
+      <div style="width:56px;height:2px;background:var(--acc, #d0a03c);margin:16px auto 52px"></div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(89,16,13,.12);border:1px solid rgba(89,16,13,.12);text-align:left">
+        <div style="background:#faf7f1;padding:40px 34px"><div style="font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--acc, #d0a03c);margin-bottom:14px">01</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:25px;font-weight:600;margin:0 0 10px;color:var(--deep, #7a1620)">Gayrimenkul ve İnşaat</h3><p style="font-size:14px;line-height:1.7;color:#5a4c45;margin:0 0 16px">Tapu, kat karşılığı inşaat, kentsel dönüşüm ve gayrimenkul uyuşmazlıkları.</p><a onClick="{{ goAreas }}" style="cursor:pointer;font-family:'Marcellus',serif;font-size:13px;letter-spacing:.5px;color:#241a1b">Detay →</a></div>
+        <div style="background:#faf7f1;padding:40px 34px"><div style="font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--acc, #d0a03c);margin-bottom:14px">02</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:25px;font-weight:600;margin:0 0 10px;color:var(--deep, #7a1620)">İş Hukuku</h3><p style="font-size:14px;line-height:1.7;color:#5a4c45;margin:0 0 16px">İşçi-işveren uyuşmazlıkları, kıdem-ihbar tazminatı ve iş kazaları.</p><a onClick="{{ goAreas }}" style="cursor:pointer;font-family:'Marcellus',serif;font-size:13px;letter-spacing:.5px;color:#241a1b">Detay →</a></div>
+        <div style="background:#faf7f1;padding:40px 34px"><div style="font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--acc, #d0a03c);margin-bottom:14px">03</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:25px;font-weight:600;margin:0 0 10px;color:var(--deep, #7a1620)">Ceza Hukuku</h3><p style="font-size:14px;line-height:1.7;color:#5a4c45;margin:0 0 16px">Soruşturma ve kovuşturma aşamalarında etkin müdafaa hizmeti.</p><a onClick="{{ goAreas }}" style="cursor:pointer;font-family:'Marcellus',serif;font-size:13px;letter-spacing:.5px;color:#241a1b">Detay →</a></div>
+        <div style="background:#faf7f1;padding:40px 34px"><div style="font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--acc, #d0a03c);margin-bottom:14px">04</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:25px;font-weight:600;margin:0 0 10px;color:var(--deep, #7a1620)">Aile Hukuku</h3><p style="font-size:14px;line-height:1.7;color:#5a4c45;margin:0 0 16px">Boşanma, velayet, nafaka ve mal paylaşımı davalarında danışmanlık.</p><a onClick="{{ goAreas }}" style="cursor:pointer;font-family:'Marcellus',serif;font-size:13px;letter-spacing:.5px;color:#241a1b">Detay →</a></div>
+        <div style="background:#faf7f1;padding:40px 34px"><div style="font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--acc, #d0a03c);margin-bottom:14px">05</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:25px;font-weight:600;margin:0 0 10px;color:var(--deep, #7a1620)">Sözleşmeler Hukuku</h3><p style="font-size:14px;line-height:1.7;color:#5a4c45;margin:0 0 16px">Ticari ve bireysel sözleşmelerin hazırlanması ve incelenmesi.</p><a onClick="{{ goAreas }}" style="cursor:pointer;font-family:'Marcellus',serif;font-size:13px;letter-spacing:.5px;color:#241a1b">Detay →</a></div>
+        <div style="background:#faf7f1;padding:40px 34px"><div style="font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--acc, #d0a03c);margin-bottom:14px">06</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:25px;font-weight:600;margin:0 0 10px;color:var(--deep, #7a1620)">Ticaret ve Şirketler</h3><p style="font-size:14px;line-height:1.7;color:#5a4c45;margin:0 0 16px">Şirket kuruluşu, ortaklık uyuşmazlıkları ve ticari alacak takibi.</p><a onClick="{{ goAreas }}" style="cursor:pointer;font-family:'Marcellus',serif;font-size:13px;letter-spacing:.5px;color:#241a1b">Detay →</a></div>
+      </div>
+    </div>
+
+    <!-- about strip -->
+    <div style="display:grid;grid-template-columns:.9fr 1.1fr;background:#f0eadf">
+      <div style="position:relative;background:repeating-linear-gradient(135deg,#e7dfd0 0 14px,#ddd3c0 14px 28px);min-height:480px">
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:ui-monospace,monospace;font-size:12px;color:#8a7a63;letter-spacing:1px">OFİS / PORTRE</div>
+      </div>
+      <div style="padding:80px 56px;display:flex;flex-direction:column;justify-content:center">
+        <div style="font-family:'Marcellus',serif;letter-spacing:3px;font-size:13px;color:var(--acc, #d0a03c);margin-bottom:16px">HAKKIMIZDA</div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:38px;line-height:1.15;margin:0 0 22px;color:#241a1b">Her dosyaya kişisel özenle yaklaşan bir hukuk anlayışı.</h2>
+        <p style="font-size:15px;line-height:1.85;color:#4d3f39;margin:0 0 16px">Avukat Mert Aydede, İstanbul Barosu'na kayıtlı olarak bireysel ve kurumsal müvekkillere hizmet vermektedir. Her uyuşmazlığı yalnızca hukuki değil, insani boyutuyla da değerlendirir.</p>
+        <p style="font-size:15px;line-height:1.85;color:#4d3f39;margin:0 0 28px">Şeffaf iletişim, dürüst yönlendirme ve titiz dosya takibi büromuzun temel ilkeleridir.</p>
+        <a onClick="{{ goAbout }}" style="cursor:pointer;font-family:'Marcellus',serif;letter-spacing:.8px;font-size:14px;color:var(--deep, #7a1620);border-bottom:1.5px solid var(--acc, #d0a03c);padding-bottom:5px;width:fit-content">MERT AYDEDE HAKKINDA →</a>
+      </div>
+    </div>
+
+    <!-- testimonial -->
+    <div style="padding:88px 44px;background:#faf7f1;text-align:center">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:80px;color:var(--acc, #d0a03c);line-height:.5;height:40px">“</div>
+      <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:32px;line-height:1.4;color:#241a1b;max-width:840px;margin:0 auto 28px">Sürecin her aşamasında bilgilendirildim ve kendimi güvende hissettim. Dosyama gösterilen özen için minnettarım.</p>
+      <div style="font-family:'Marcellus',serif;letter-spacing:1px;font-size:13px;color:var(--deep, #7a1620)">A.K. &nbsp;·&nbsp; GAYRİMENKUL DAVASI MÜVEKKİLİ</div>
+    </div>
+
+    <!-- CTA -->
+    <div style="background:var(--deepA, #59100d);color:#f3e6d3;padding:70px 44px;text-align:center">
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:40px;margin:0 0 14px;color:#fff">Hukuki desteğe mi ihtiyacınız var?</h2>
+      <p style="font-size:15px;opacity:.85;max-width:560px;margin:0 auto 30px;line-height:1.7">İlk görüşmede dosyanızı ücretsiz değerlendirir, izlenecek yolu netleştiririz.</p>
+      <a onClick="{{ goContact }}" style="cursor:pointer;display:inline-block;background:var(--acc, #d0a03c);color:#241a1b;padding:16px 38px;font-family:'Marcellus',serif;letter-spacing:1px;font-size:14px;font-weight:600">RANDEVU TALEP EDİN</a>
+    </div>
+
+  </div>
+  </sc-if>
+
+  <!-- ============================================================= -->
+  <!-- HAKKIMIZDA -->
+  <!-- ============================================================= -->
+  <sc-if value="{{ showAbout }}" hint-placeholder-val="{{ false }}">
+  <div data-screen-label="Hakkımızda">
+
+    <!-- page header -->
+    <div style="background:var(--deepA, #59100d);color:#f3e6d3;padding:64px 44px;text-align:center">
+      <div style="font-family:'Marcellus',serif;letter-spacing:3px;font-size:13px;color:var(--acc2, #ecc873);margin-bottom:14px">HAKKIMIZDA</div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:52px;margin:0;color:#fff">Av. Mert Aydede</h1>
+      <div style="width:56px;height:2px;background:var(--acc, #d0a03c);margin:20px auto 0"></div>
+    </div>
+
+    <!-- bio -->
+    <div style="display:grid;grid-template-columns:.85fr 1.15fr;gap:0;background:#faf7f1">
+      <div style="position:relative;background:repeating-linear-gradient(135deg,#e7dfd0 0 14px,#ddd3c0 14px 28px);min-height:560px">
+        <div style="position:absolute;inset:26px;border:1px solid var(--acc, #d0a03c)"></div>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:ui-monospace,monospace;font-size:12px;color:#8a7a63;letter-spacing:1px">MERT AYDEDE PORTRE</div>
+      </div>
+      <div style="padding:72px 56px;display:flex;flex-direction:column;justify-content:center">
+        <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:36px;line-height:1.2;margin:0 0 22px;color:#241a1b">Her dosya, kişisel bir sorumluluktur.</h2>
+        <p style="font-size:15px;line-height:1.9;color:#4d3f39;margin:0 0 16px">Avukat Mert Aydede, İstanbul Barosu'na kayıtlı olarak bireysel ve kurumsal müvekkillere hukuki danışmanlık ve dava vekilliği hizmeti sunmaktadır. Gayrimenkul, iş, ceza, aile, sözleşmeler ve ticaret hukuku alanlarında; her uyuşmazlığı hem hukuki hem de insani boyutuyla ele alır.</p>
+        <p style="font-size:15px;line-height:1.9;color:#4d3f39;margin:0 0 16px">Mesleki yaklaşımının merkezinde, müvekkilin sürecin her aşamasında şeffaf biçimde bilgilendirilmesi ve dosyanın titizlikle takibi yer alır. Her davada, en etkili hukuki stratejiyi kurmayı ve müvekkilin menfaatini korumayı önceler.</p>
+        <p style="font-size:15px;line-height:1.9;color:#4d3f39;margin:0 0 0">Dürüst yönlendirme ve gizlilik ilkesi, büronun vazgeçilmez değerleridir.</p>
+      </div>
+    </div>
+
+    <!-- values -->
+    <div style="padding:80px 44px;background:#f0eadf;text-align:center">
+      <div style="font-family:'Marcellus',serif;letter-spacing:3px;font-size:13px;color:var(--acc, #d0a03c);margin-bottom:14px">İLKELERİMİZ</div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:38px;margin:0 0 8px;color:#241a1b">Çalışma Değerlerimiz</h2>
+      <div style="width:56px;height:2px;background:var(--acc, #d0a03c);margin:16px auto 48px"></div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:28px;text-align:left">
+        <div style="background:#faf7f1;padding:34px 28px;border-top:2px solid var(--acc, #d0a03c)"><div style="font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--acc, #d0a03c);margin-bottom:12px">01</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:600;margin:0 0 8px;color:var(--deep, #7a1620)">Gizlilik</h3><p style="font-size:13.5px;line-height:1.7;color:#5a4c45;margin:0">Müvekkil bilgileri en yüksek gizlilik standartlarıyla korunur.</p></div>
+        <div style="background:#faf7f1;padding:34px 28px;border-top:2px solid var(--acc, #d0a03c)"><div style="font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--acc, #d0a03c);margin-bottom:12px">02</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:600;margin:0 0 8px;color:var(--deep, #7a1620)">Şeffaflık</h3><p style="font-size:13.5px;line-height:1.7;color:#5a4c45;margin:0">Süreç, riskler ve maliyetler baştan açıkça paylaşılır.</p></div>
+        <div style="background:#faf7f1;padding:34px 28px;border-top:2px solid var(--acc, #d0a03c)"><div style="font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--acc, #d0a03c);margin-bottom:12px">03</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:600;margin:0 0 8px;color:var(--deep, #7a1620)">Titizlik</h3><p style="font-size:13.5px;line-height:1.7;color:#5a4c45;margin:0">Her dosya, ayrıntılara özen gösterilerek hazırlanır ve takip edilir.</p></div>
+        <div style="background:#faf7f1;padding:34px 28px;border-top:2px solid var(--acc, #d0a03c)"><div style="font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--acc, #d0a03c);margin-bottom:12px">04</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:600;margin:0 0 8px;color:var(--deep, #7a1620)">Sonuç Odaklılık</h3><p style="font-size:13.5px;line-height:1.7;color:#5a4c45;margin:0">Müvekkilin menfaatini koruyan, uygulanabilir çözümler üretilir.</p></div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div style="background:var(--deepA, #59100d);color:#f3e6d3;padding:70px 44px;text-align:center">
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:38px;margin:0 0 14px;color:#fff">Dosyanızı birlikte değerlendirelim.</h2>
+      <p style="font-size:15px;opacity:.85;max-width:560px;margin:0 auto 30px;line-height:1.7">İlk görüşmede süreci ve izlenecek yolu netleştiririz.</p>
+      <a onClick="{{ goContact }}" style="cursor:pointer;display:inline-block;background:var(--acc, #d0a03c);color:#241a1b;padding:16px 38px;font-family:'Marcellus',serif;letter-spacing:1px;font-size:14px;font-weight:600">İLETİŞİME GEÇİN</a>
+    </div>
+
+  </div>
+  </sc-if>
+
+  <!-- ============================================================= -->
+  <!-- ÇALIŞMA ALANLARI -->
+  <!-- ============================================================= -->
+  <sc-if value="{{ showAreas }}" hint-placeholder-val="{{ false }}">
+  <div data-screen-label="Çalışma Alanları">
+
+    <!-- page header -->
+    <div style="background:var(--deepA, #59100d);color:#f3e6d3;padding:64px 44px;text-align:center">
+      <div style="font-family:'Marcellus',serif;letter-spacing:3px;font-size:13px;color:var(--acc2, #ecc873);margin-bottom:14px">ÇALIŞMA ALANLARI</div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:52px;margin:0;color:#fff">Uzmanlık Alanlarımız</h1>
+      <div style="width:56px;height:2px;background:var(--acc, #d0a03c);margin:20px auto 0"></div>
+    </div>
+
+    <div style="padding:24px 44px 40px;background:#faf7f1">
+      <div style="display:flex;gap:34px;align-items:center;padding:40px 0;border-bottom:1px solid rgba(89,16,13,.14)">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:52px;color:var(--acc, #d0a03c);min-width:70px">01</div>
+        <div><h3 style="font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;margin:0 0 8px;color:var(--deep, #7a1620)">Gayrimenkul ve İnşaat Hukuku</h3><p style="font-size:14.5px;line-height:1.8;color:#4d3f39;margin:0;max-width:820px">Tapu iptal ve tescil davaları, kat karşılığı inşaat sözleşmeleri, kentsel dönüşüm süreçleri, ayıplı ifa, kira uyuşmazlıkları ve gayrimenkul alım-satımına ilişkin danışmanlık.</p></div>
+      </div>
+      <div style="display:flex;gap:34px;align-items:center;padding:40px 0;border-bottom:1px solid rgba(89,16,13,.14)">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:52px;color:var(--acc, #d0a03c);min-width:70px">02</div>
+        <div><h3 style="font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;margin:0 0 8px;color:var(--deep, #7a1620)">İş Hukuku</h3><p style="font-size:14.5px;line-height:1.8;color:#4d3f39;margin:0;max-width:820px">İşçi-işveren uyuşmazlıkları, kıdem ve ihbar tazminatı, işe iade davaları, fazla mesai alacakları, iş kazası ve meslek hastalığı ile hizmet tespiti davaları.</p></div>
+      </div>
+      <div style="display:flex;gap:34px;align-items:center;padding:40px 0;border-bottom:1px solid rgba(89,16,13,.14)">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:52px;color:var(--acc, #d0a03c);min-width:70px">03</div>
+        <div><h3 style="font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;margin:0 0 8px;color:var(--deep, #7a1620)">Ceza Hukuku</h3><p style="font-size:14.5px;line-height:1.8;color:#4d3f39;margin:0;max-width:820px">Soruşturma ve kovuşturma aşamalarında müdafi ve müşteki vekilliği, ifade ve sorgu süreçleri, tutukluluk incelemesi ile istinaf ve temyiz başvuruları.</p></div>
+      </div>
+      <div style="display:flex;gap:34px;align-items:center;padding:40px 0;border-bottom:1px solid rgba(89,16,13,.14)">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:52px;color:var(--acc, #d0a03c);min-width:70px">04</div>
+        <div><h3 style="font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;margin:0 0 8px;color:var(--deep, #7a1620)">Aile Hukuku</h3><p style="font-size:14.5px;line-height:1.8;color:#4d3f39;margin:0;max-width:820px">Anlaşmalı ve çekişmeli boşanma, velayet ve kişisel ilişki tesisi, nafaka, mal rejiminin tasfiyesi ve aile içi mal paylaşımına ilişkin dava ve danışmanlık.</p></div>
+      </div>
+      <div style="display:flex;gap:34px;align-items:center;padding:40px 0;border-bottom:1px solid rgba(89,16,13,.14)">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:52px;color:var(--acc, #d0a03c);min-width:70px">05</div>
+        <div><h3 style="font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;margin:0 0 8px;color:var(--deep, #7a1620)">Sözleşmeler Hukuku</h3><p style="font-size:14.5px;line-height:1.8;color:#4d3f39;margin:0;max-width:820px">Ticari ve bireysel sözleşmelerin hazırlanması, incelenmesi ve müzakeresi; sözleşmeden doğan uyuşmazlıkların çözümü ve risk değerlendirmesi.</p></div>
+      </div>
+      <div style="display:flex;gap:34px;align-items:center;padding:40px 0">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:52px;color:var(--acc, #d0a03c);min-width:70px">06</div>
+        <div><h3 style="font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;margin:0 0 8px;color:var(--deep, #7a1620)">Ticaret ve Şirketler Hukuku</h3><p style="font-size:14.5px;line-height:1.8;color:#4d3f39;margin:0;max-width:820px">Şirket kuruluş ve tasfiye işlemleri, ortaklık uyuşmazlıkları, ticari alacak takibi, genel kurul süreçleri ve ticari sözleşmelere ilişkin danışmanlık.</p></div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div style="background:var(--deepA, #59100d);color:#f3e6d3;padding:70px 44px;text-align:center">
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:38px;margin:0 0 14px;color:#fff">Alanınıza uygun bir görüşme planlayalım.</h2>
+      <a onClick="{{ goContact }}" style="cursor:pointer;display:inline-block;margin-top:12px;background:var(--acc, #d0a03c);color:#241a1b;padding:16px 38px;font-family:'Marcellus',serif;letter-spacing:1px;font-size:14px;font-weight:600">RANDEVU TALEP EDİN</a>
+    </div>
+
+  </div>
+  </sc-if>
+
+  <!-- ============================================================= -->
+  <!-- İLETİŞİM -->
+  <!-- ============================================================= -->
+  <sc-if value="{{ showContact }}" hint-placeholder-val="{{ false }}">
+  <div data-screen-label="İletişim">
+
+    <!-- page header -->
+    <div style="background:var(--deepA, #59100d);color:#f3e6d3;padding:64px 44px;text-align:center">
+      <div style="font-family:'Marcellus',serif;letter-spacing:3px;font-size:13px;color:var(--acc2, #ecc873);margin-bottom:14px">İLETİŞİM</div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:52px;margin:0;color:#fff">Bize Ulaşın</h1>
+      <div style="width:56px;height:2px;background:var(--acc, #d0a03c);margin:20px auto 0"></div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:0;background:#faf7f1">
+      <!-- form -->
+      <div style="padding:64px 56px">
+        <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:32px;margin:0 0 8px;color:#241a1b">Randevu Talebi</h2>
+        <p style="font-size:14.5px;line-height:1.7;color:#5a4c45;margin:0 0 32px">Bilgilerinizi bırakın; en kısa sürede size dönüş yapalım.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px">
+          <div><label style="display:block;font-family:'Marcellus',serif;font-size:12px;letter-spacing:.8px;color:var(--deep, #7a1620);margin-bottom:7px">AD SOYAD</label><input type="text" style="width:100%;padding:13px 14px;border:1px solid rgba(89,16,13,.2);background:#fff;font-size:14px;color:#241a1b;outline:none" placeholder="Adınız Soyadınız"></div>
+          <div><label style="display:block;font-family:'Marcellus',serif;font-size:12px;letter-spacing:.8px;color:var(--deep, #7a1620);margin-bottom:7px">TELEFON</label><input type="tel" style="width:100%;padding:13px 14px;border:1px solid rgba(89,16,13,.2);background:#fff;font-size:14px;color:#241a1b;outline:none" placeholder="+90 (5xx) xxx xx xx"></div>
+        </div>
+        <div style="margin-bottom:18px"><label style="display:block;font-family:'Marcellus',serif;font-size:12px;letter-spacing:.8px;color:var(--deep, #7a1620);margin-bottom:7px">E-POSTA</label><input type="email" style="width:100%;padding:13px 14px;border:1px solid rgba(89,16,13,.2);background:#fff;font-size:14px;color:#241a1b;outline:none" placeholder="ornek@eposta.com"></div>
+        <div style="margin-bottom:18px"><label style="display:block;font-family:'Marcellus',serif;font-size:12px;letter-spacing:.8px;color:var(--deep, #7a1620);margin-bottom:7px">KONU</label><input type="text" style="width:100%;padding:13px 14px;border:1px solid rgba(89,16,13,.2);background:#fff;font-size:14px;color:#241a1b;outline:none" placeholder="Örn. Gayrimenkul uyuşmazlığı"></div>
+        <div style="margin-bottom:26px"><label style="display:block;font-family:'Marcellus',serif;font-size:12px;letter-spacing:.8px;color:var(--deep, #7a1620);margin-bottom:7px">MESAJINIZ</label><textarea rows="4" style="width:100%;padding:13px 14px;border:1px solid rgba(89,16,13,.2);background:#fff;font-size:14px;color:#241a1b;outline:none;resize:vertical" placeholder="Dosyanızı kısaca açıklayın"></textarea></div>
+        <button type="button" style="background:var(--deep, #7a1620);color:#fff;border:none;padding:15px 38px;font-family:'Marcellus',serif;letter-spacing:.8px;font-size:14px;cursor:pointer">TALEBİ GÖNDER</button>
+        <p style="font-size:11.5px;line-height:1.6;color:#8a7a63;margin:20px 0 0">Bu form üzerinden iletilen bilgiler gizlilik esasına göre işlenir ve avukat-müvekkil ilişkisi doğurmaz.</p>
+      </div>
+      <!-- info -->
+      <div style="background:var(--panelDark, #2a0a0b);color:#f0e2cf;padding:64px 48px">
+        <div style="font-family:'Marcellus',serif;letter-spacing:2px;font-size:12px;color:var(--acc2, #ecc873);margin-bottom:28px">İLETİŞİM BİLGİLERİ</div>
+        <div style="margin-bottom:26px"><div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:#fff;margin-bottom:4px">Adres</div><div style="font-size:14px;line-height:1.7;opacity:.85">Konak Mah. Milli Kütüphane Cad. No: 19<br>Tibaş İş Hanı, Kat: 2, 205<br>Konak/İzmir</div></div>
+        <div style="margin-bottom:26px"><div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:#fff;margin-bottom:4px">Telefon</div><div style="font-size:14px;line-height:1.7;opacity:.85">+90 (530) 065 15 79</div></div>
+        <div style="margin-bottom:26px"><div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:#fff;margin-bottom:4px">E-posta</div><div style="font-size:14px;line-height:1.7;opacity:.85">av.mertaydede@aydedehukuk.com</div></div>
+        <div style="margin-bottom:32px"><div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:#fff;margin-bottom:4px">Çalışma Saatleri</div><div style="font-size:14px;line-height:1.7;opacity:.85">Pazartesi – Cumartesi · 09:00 – 18:00</div></div>
+        <div style="position:relative;height:180px;background:repeating-linear-gradient(135deg,rgba(255,255,255,.06) 0 12px,rgba(255,255,255,.03) 12px 24px);border:1px solid rgba(236,200,115,.25)"><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:ui-monospace,monospace;font-size:11px;color:var(--acc2, #ecc873);letter-spacing:1px">HARİTA</div></div>
+      </div>
+    </div>
+
+  </div>
+  </sc-if>
+
+  <!-- ============ FOOTER ============ -->
+  <div style="background:#241a1b;color:#c9bcae;padding:56px 44px 30px">
+    <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1)">
+      <div><img src="assets/logo-primary-t.png" style="height:78px"><p style="font-size:13.5px;line-height:1.7;margin:18px 0 0;opacity:.7;max-width:280px">İlkeli, sonuç odaklı ve gizlilik esaslı hukuki danışmanlık.</p></div>
+      <div><div style="font-family:'Marcellus',serif;letter-spacing:1px;color:var(--acc2, #ecc873);font-size:13px;margin-bottom:16px">MENÜ</div><div style="display:flex;flex-direction:column;gap:10px;font-size:13.5px;opacity:.8"><a onClick="{{ goHome }}" style="cursor:pointer">Anasayfa</a><a onClick="{{ goAbout }}" style="cursor:pointer">Hakkımızda</a><a onClick="{{ goAreas }}" style="cursor:pointer">Çalışma Alanları</a><a onClick="{{ goContact }}" style="cursor:pointer">İletişim</a></div></div>
+      <div><div style="font-family:'Marcellus',serif;letter-spacing:1px;color:var(--acc2, #ecc873);font-size:13px;margin-bottom:16px">ALANLAR</div><div style="display:flex;flex-direction:column;gap:10px;font-size:13.5px;opacity:.8"><span>Gayrimenkul</span><span>İş Hukuku</span><span>Ceza Hukuku</span><span>Aile Hukuku</span></div></div>
+      <div><div style="font-family:'Marcellus',serif;letter-spacing:1px;color:var(--acc2, #ecc873);font-size:13px;margin-bottom:16px">İLETİŞİM</div><div style="display:flex;flex-direction:column;gap:10px;font-size:13.5px;opacity:.8"><span>+90 (212) 000 00 00</span><span>info@aydedehukuk.com</span><span>Levent, İstanbul</span></div></div>
+    </div>
+    <div style="padding-top:22px;font-size:12px;opacity:.55;display:flex;justify-content:space-between"><span>© 2026 Aydede Hukuk Bürosu</span><span>Bu site bir reklam niteliği taşımaz.</span></div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;$preview&quot;: { &quot;width&quot;: 1280, &quot;height&quot;: 900 },
+  &quot;palette&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;Bordo &amp; Altın&quot;, &quot;Zümrüt &amp; Altın&quot;, &quot;Gece Mavisi &amp; Altın&quot;], &quot;default&quot;: &quot;Bordo &amp; Altın&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Karakter&quot; },
+  &quot;accent&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;Klasik Altın&quot;, &quot;Şampanya&quot;, &quot;Bronz&quot;], &quot;default&quot;: &quot;Klasik Altın&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Karakter&quot; },
+  &quot;serif&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;Orijinal (Cormorant)&quot;, &quot;Cormorant&quot;, &quot;Playfair&quot;, &quot;Marcellus&quot;], &quot;default&quot;: &quot;Orijinal (Cormorant)&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Karakter&quot; }
+}">
+class Component extends DCLogic {
+  state = { page: 'home' };
+  nav(p) {
+    this.setState({ page: p });
+    try { window.scrollTo({ top: 0, behavior: 'smooth' }); } catch (e) {}
+  }
+  renderVals() {
+    const p = this.props || {};
+    const palettes = {
+      "Bordo & Altın":      { deep:"#7a1620", deepA:"#59100d", deepB:"#33090b", deepC:"#210709", deepGlow:"#4d0d10", panelDark:"#2a0a0b" },
+      "Zümrüt & Altın":     { deep:"#1f5c3d", deepA:"#123a28", deepB:"#10231a", deepC:"#0a1712", deepGlow:"#153d29", panelDark:"#16281f" },
+      "Gece Mavisi & Altın":{ deep:"#1e3a5f", deepA:"#122844", deepB:"#0f1a2b", deepC:"#0a1220", deepGlow:"#13314f", panelDark:"#141f2e" }
+    };
+    const accents = {
+      "Klasik Altın": { acc:"#d0a03c", acc2:"#ecc873" },
+      "Şampanya":     { acc:"#c2a878", acc2:"#e6d3a8" },
+      "Bronz":        { acc:"#a06a3c", acc2:"#c89463" }
+    };
+    const serifs = {
+      "Cormorant": "'Cormorant Garamond', serif",
+      "Playfair":  "'Playfair Display', serif",
+      "Marcellus": "'Marcellus', serif"
+    };
+    const pal = palettes[p.palette] || palettes["Bordo & Altın"];
+    const acc = accents[p.accent] || accents["Klasik Altın"];
+    let css = "";
+    for (const k in pal) css += "--" + k + ":" + pal[k] + ";";
+    css += "--acc:" + acc.acc + ";--acc2:" + acc.acc2 + ";";
+    if (serifs[p.serif]) css += "--serif:" + serifs[p.serif] + ";";
+
+    const page = this.state.page;
+    const active = "color:var(--deep, #7a1620);border-bottom:2px solid var(--acc, #d0a03c)";
+    return {
+      themeStyle: css,
+      showHome: page === 'home',
+      showAbout: page === 'about',
+      showAreas: page === 'areas',
+      showContact: page === 'contact',
+      goHome: () => this.nav('home'),
+      goAbout: () => this.nav('about'),
+      goAreas: () => this.nav('areas'),
+      goContact: () => this.nav('contact'),
+      aHome: page === 'home' ? active : '',
+      aAbout: page === 'about' ? active : '',
+      aAreas: page === 'areas' ? active : ''
+    };
+  }
+}
+</script>
+</body>
+</html>

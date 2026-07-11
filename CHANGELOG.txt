@@ -9,6 +9,14 @@ Amaç     : Sitede yapılan tüm değişikliklerin kronolojik kaydı.
 2026-07-11
 ----------
 
+[Altyapı] Makine-okunur veri: JSON-LD + llms.txt  (PR #7)
+  - Tüm sayfaların <head>'ine Schema.org "Attorney" tipinde JSON-LD eklendi:
+    ad, adres, telefon, e-posta (+ alternatif), KEP, İzmir Barosu sicil no
+    19573, posta kodu 35250, çalışma saatleri ve çalışma alanları. Görünümü
+    değiştirmez.
+  - Kök dizine llms.txt eklendi (AI ajanları için markdown site/iletişim özeti)
+  - Amaç: arama motorları ve AI ajanları/MCP'lerin bilgileri güvenilir okuması
+
 [Tasarım] Mobil iyileştirmeler  (PR #6)
   - Mobil hamburger menü (☰) eklendi (script.js + hidden-on-desktop buton)
   - Header kelime markası mobilde küçültüldü (yatay taşma önlendi)

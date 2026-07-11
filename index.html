@@ -14,8 +14,8 @@
     <div class="page-shell">
       <div class="utility-bar">
         <div class="utility-links">
-          <span class="accent-text">✆ +90 (212) 000 00 00</span>
-          <span>info@aydedehukuk.com</span>
+          <span class="accent-text">✆ +90 (530) 065 15 79</span>
+          <span>av.mertaydede@aydedehukuk.com</span>
         </div>
         <div class="utility-languages">
           <span class="accent-text">TR</span>
@@ -42,7 +42,7 @@
         <section class="hero-section">
           <div class="container hero-grid">
             <div class="hero-copy">
-              <p class="section-kicker">AVUKAT MERT AYDEDE</p>
+              <button type="button" class="section-kicker kicker-trigger" id="lawyerModalTrigger" aria-haspopup="dialog" aria-controls="lawyerModal">AVUKAT MERT AYDEDE</button>
               <h1>Hukukta güven, deneyim ve titizlik.</h1>
               <div class="divider"></div>
               <p class="hero-text">
@@ -135,7 +135,7 @@
               <p class="section-kicker">HAKKIMIZDA</p>
               <h2>Her dosyaya kişisel özenle yaklaşan bir hukuk anlayışı.</h2>
               <p>
-                Avukat Mert Aydede, İstanbul Barosu’na kayıtlı olarak bireysel ve kurumsal müvekkillere hizmet vermektedir. Her uyuşmazlığı yalnızca hukuki değil, insani boyutuyla da değerlendirir.
+                Avukat Mert Aydede, İzmir Barosu’na kayıtlı olarak bireysel ve kurumsal müvekkillere hizmet vermektedir. Her uyuşmazlığı yalnızca hukuki değil, insani boyutuyla da değerlendirir.
               </p>
               <p>
                 Şeffaf iletişim, dürüst yönlendirme ve titiz dosya takibi büromuzun temel ilkeleridir.
@@ -159,7 +159,7 @@
           <div class="container cta-box">
             <h2>Hukuki desteğe mi ihtiyacınız var?</h2>
             <p>İlk görüşmede dosyanızı ücretsiz değerlendirir, izlenecek yolu netleştiririz.</p>
-            <a class="button primary dark" href="mailto:info@aydedehukuk.com">Randevu Talep Edin</a>
+            <a class="button primary dark" href="mailto:av.mertaydede@aydedehukuk.com">Randevu Talep Edin</a>
           </div>
         </section>
       </main>
@@ -186,9 +186,9 @@
           </div>
           <div>
             <h3>İletişim</h3>
-            <span>+90 (212) 000 00 00</span>
-            <span>info@aydedehukuk.com</span>
-            <span>Levent, İstanbul</span>
+            <span>+90 (530) 065 15 79</span>
+            <span>av.mertaydede@aydedehukuk.com</span>
+            <span>Konak/İzmir</span>
           </div>
         </div>
         <div class="container footer-bottom">
@@ -196,6 +196,14 @@
           <span>Bu site bir reklam niteliği taşımaz.</span>
         </div>
       </footer>
+    </div>
+
+    <div class="image-modal" id="lawyerModal" role="dialog" aria-modal="true" aria-labelledby="lawyerModalTrigger" hidden>
+      <div class="image-modal__backdrop" data-modal-close></div>
+      <div class="image-modal__dialog" role="document">
+        <button type="button" class="image-modal__close" data-modal-close aria-label="Kapat">&times;</button>
+        <img class="image-modal__img" src="assets/avukat-mert-aydede.png" alt="Avukat Mert Aydede - İzmir Barosu levha kaydı" />
+      </div>
     </div>
 
     <script src="script.js"></script>

@@ -1,0 +1,73 @@
+AYDEDE HUKUK BÜROSU — WEB SİTESİ DEĞİŞİKLİK GÜNLÜĞÜ (CHANGELOG)
+================================================================
+Alan adı : https://aydedehukuk.com
+Depo     : YH-ca-transformation/aydedehukuk-site
+Amaç     : Sitede yapılan tüm değişikliklerin kronolojik kaydı.
+           En yeni değişiklik en üsttedir.
+
+
+2026-07-11
+----------
+
+[Performans] Hero arka plan görseli optimize edildi  (PR #4)
+  - assets/mert-aydede-background : PNG (1.59 MB) -> JPEG q82 (183 KB), ~%88 küçülme
+  - Görsel kalitesi birebir korundu; sayfa ilk yükleme hızı arttı
+  - Bu CHANGELOG.txt dosyası eklendi
+
+[Tasarım] Header/footer marka düzeni ve ana sayfa hero arka planı  (PR #3)
+  - Footer: yazısız sade amblem (logo-mark-t.png) + krem yuvarlak plaka
+    (koyu footer zemininde okunabilirlik için)
+  - Header: amblemin yanına tek satır, bold, bordo "AYDEDE HUKUK BÜROSU"
+    kelime markası eklendi (tüm sayfalar)
+  - Ana sayfa hero: avukat portresi tam-genişlik arka plan (kırpmasız/contain)
+    + soldan krem degrade örtü (yazı okunabilirliği); mobilde daha yoğun örtü
+  - "Avukat Portre Fotoğrafı" placeholder kutusu kaldırıldı
+  - Yeni varlık: assets/mert-aydede-background.jpg
+
+[İçerik] İletişim bilgileri, İzmir Barosu ve avukat profil pop-up'ı  (PR #2)
+  - Adres  : Levent/İstanbul -> Konak/İzmir
+             (tam adres iletişim sayfasında: Konak Mah. Milli Kütüphane Cad.
+              No: 19, Tibaş İş Hanı, Kat: 2, 205)
+  - Telefon: +90 (212) 000 00 00 -> +90 (530) 065 15 79
+  - E-posta: info@aydedehukuk.com -> av.mertaydede@aydedehukuk.com
+             (üst çubuk, footer ve mailto bağlantıları dahil — tüm sayfalar)
+  - Baro   : "İstanbul Barosu" -> "İzmir Barosu"
+  - Ana sayfa: "AVUKAT MERT AYDEDE" başlığı büyütülüp tıklanabilir yapıldı;
+    tıklanınca İzmir Barosu levha kartı tam-genişlik pop-up'ta açılıyor
+    (× butonu / arka plana tıklama / Esc ile kapanır)
+  - Yeni varlık: assets/avukat-mert-aydede.png
+
+[Bakım] Eski site klasörü kaldırıldı + iş akışı belgelendi  (PR #1)
+  - Kullanılmayan "Mert Aydede'nin Web Sitesi/" klasörü (14 dosya) silindi
+  - DEPLOYMENT_PLAN.md: değişiklik yönetimi iş akışı, Google Maps entegrasyon
+    planı ve bakım kontrol listesi eklendi
+
+[Altyapı] Alan adı ve HTTPS yayın kurulumu
+  - GoDaddy DNS: apex A kayıtları GitHub Pages IP'lerine yönlendirildi
+    (185.199.108.153 / .109.153 / .110.153 / .111.153),
+    www CNAME -> yh-ca-transformation.github.io
+  - GitHub Pages özel alan adı doğrulandı: aydedehukuk.com
+  - Let's Encrypt TLS sertifikası üretildi, "Enforce HTTPS" etkinleştirildi
+    (sertifika geçerlilik sonu: 2026-10-09) -> "Güvenli Değil" uyarısı giderildi
+
+[Başlangıç] Site kurulumu ve tasarım
+  - GitHub Pages statik sitesi, özel alan adı (CNAME), otomatik deploy workflow
+  - Claude Design tasarım dili uygulandı
+  - Sayfalar: index.html, hakkimizda.html, hizmetler.html, iletisim.html
+  - Stiller: styles.css / küçük JS davranışları: script.js
+
+
+BEKLEYEN / SIRADAKİ İŞLER
+-------------------------
+  - Kurumsal proxy: şirket ağında sitenin açılması için IT'den allowlist talebi
+    (site dışı, ağ politikası konusu)
+  - (Opsiyonel) Hero görseli için WebP sürümü (cwebp/ImageMagick kurulumu gerekir)
+  - (Planlı) İletişim sayfasına Google Maps iframe embed (bkz. DEPLOYMENT_PLAN.md)
+
+
+NASIL GÜNCELLENİR
+-----------------
+Her yeni değişiklikte en üste kısa bir madde ekleyin:
+  [Kategori] açıklama  (PR #numara)
+Kategoriler: [İçerik] [Tasarım] [Performans] [Bakım] [Altyapı] [Hata Düzeltme]
+Yeni bir güne geçildiğinde yeni bir "YYYY-AA-GG" tarih başlığı açın.

@@ -6,6 +6,21 @@ Amaç     : Sitede yapılan tüm değişikliklerin kronolojik kaydı.
            En yeni değişiklik en üsttedir.
 
 
+2026-07-15
+----------
+
+[Altyapı] Favicon / site simgesi eklendi  (PR #8)
+  - Google arama sonuçları ve tarayıcı sekmesinde görünmek üzere favicon seti
+    oluşturuldu (kaynak: logo-mark-t.png — A-sütunu + terazi logosu; krem #faf7f1
+    zemine ortalanarak kareye alındı, şeffaflık düzleştirildi)
+  - Kök dizine favicon.ico (çok boyutlu: 16/32/48/64)
+  - assets/favicon/: favicon-16/32/48/96 px + icon-192/512 + apple-touch-icon (180)
+  - Kök dizine site.webmanifest (PWA/Android simgesi; theme #7a1620, bg #faf7f1)
+  - Tüm sayfaların <head>'ine favicon <link> etiketleri eklendi
+  - Not: Google'ın arama sonuçlarında yeni simgeyi göstermesi, siteyi yeniden
+    taramasına bağlıdır (birkaç gün–hafta sürebilir). Sayfa görünümü değişmez.
+
+
 2026-07-11
 ----------
 

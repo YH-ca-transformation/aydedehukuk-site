@@ -1,0 +1,11 @@
+{
+  "name": "Aydede Hukuk Bürosu",
+  "short_name": "Aydede Hukuk",
+  "icons": [
+    { "src": "assets/favicon/icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "assets/favicon/icon-512.png", "type": "image/png", "sizes": "512x512" }
+  ],
+  "theme_color": "#7a1620",
+  "background_color": "#faf7f1",
+  "display": "standalone"
+}

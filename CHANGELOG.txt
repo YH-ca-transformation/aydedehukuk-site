@@ -9,7 +9,7 @@ Amaç     : Sitede yapılan tüm değişikliklerin kronolojik kaydı.
 2026-07-15
 ----------
 
-[Altyapı] Favicon / site simgesi eklendi
+[Altyapı] Favicon / site simgesi eklendi  (PR #8)
   - Google arama sonuçları ve tarayıcı sekmesinde görünmek üzere favicon seti
     oluşturuldu (kaynak: logo-mark-t.png — A-sütunu + terazi logosu; krem #faf7f1
     zemine ortalanarak kareye alındı, şeffaflık düzleştirildi)

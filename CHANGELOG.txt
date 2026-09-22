@@ -6,6 +6,41 @@ Amaç     : Sitede yapılan tüm değişikliklerin kronolojik kaydı.
            En yeni değişiklik en üsttedir.
 
 
+2026-09-22
+----------
+
+[İçerik] Geçici tek sayfa: "site yenilenme aşamasındadır" + iletişim bilgileri
+  - index.html, yenileme çalışması süresince yayında kalacak tek sayfalık
+    bilgilendirme sayfasıyla değiştirildi: bilgilendirme şeridi, logo,
+    "Web sitemiz yenileniyor" başlığı ve iletişim kartı
+  - Kartta Av. Mert Aydede (İzmir Barosu sicil 19573), telefon, e-posta, KEP,
+    büro adresi ve çalışma saatleri yer alıyor; Ara / E-posta Gönder /
+    Haritada Göster (Google Maps arama linki) butonları
+  - Alternatif e-posta (av.mertaydede@outlook.com) bu sayfada ve llms.txt'te
+    yayınlanmıyor (hem görünür metinden hem JSON-LD'den çıkarıldı). Not:
+    hakkimizda/hizmetler/iletisim sayfalarının JSON-LD'sinde hâlâ duruyor.
+  - Sayfa kendi kendine yeterli: styles.css ve script.js kullanmıyor, marka
+    renkleri ve yazı tipleri sayfa içi <style> bloğunda tekrarlandı
+  - JSON-LD (Attorney) ve favicon etiketleri korundu; canonical + OG etiketleri
+    eklendi
+  - hakkimizda.html / hizmetler.html / iletisim.html sayfaları geçici olarak
+    ana sayfaya yönlendiriliyor: her birinin <head> başına işaretli
+    "GEÇİCİ YÖNLENDİRME" bloğu eklendi (window.location.replace('/') +
+    meta refresh yedeği). Sayfaların KENDİ İÇERİKLERİ dosyalarda korundu;
+    arka planda yenileme çalışması aynı dosyalar üzerinde sürdürülebilir
+  - gecici-sayfa.html: yayındaki geçici sayfanın saklı kopyası (noindex).
+    index.html ileride yenilenmiş ana sayfayla değiştirildiğinde bu şablon
+    depoda kalır
+  - scripts/gecici-yayini-kaldir.py: tek komutla yönlendirmeleri kaldırır
+    (--kontrol ile önizleme); index.html için ne yapılacağını hatırlatır
+  - llms.txt'e geçici durum notu işlendi
+  - Marka bloğu, diğer sayfalardaki header ile birebir aynı: amblem
+    (logo-mark-t.png) + Cormorant Garamond "AYDEDE HUKUK BÜROSU" yazı markası.
+    Yeni görsel dosyası eklenmedi.
+  - og:image logo-full.png yerine logo-primary.png (logo-full* dosyaları kırpık)
+  - GERİ ALMA: git checkout 2dea786 -- index.html  (tam sürüm ana sayfa)
+
+
 2026-07-15
 ----------
 
@@ -99,6 +134,25 @@ BEKLEYEN / SIRADAKİ İŞLER
 -------------------------
 Durum işaretleri:  [ ] başlanmadı   [~] devam ediyor   [x] tamamlandı (dated
 girdiye taşınır).  Bir madde bittiğinde yukarıdaki tarihli bölüme taşıyın.
+
+Varlıklar
+  [ ] assets/brand/logo-full-t.png ve logo-full.png BOZUK: "AVUKAT MERT AYDEDE"
+      yazısının son harfi kaynak dosyanın sağ kenarında kesik (1400 px'e
+      dayanıyor). Tasarımcıdan kenar boşluklu tam sürüm istenmeli. Bu dosyalar
+      şu an sitede hiçbir yerde kullanılmıyor.
+
+Yayın durumu  (GEÇİCİ YAYIN AÇIK — 2026-09-22'den beri)
+  [~] index.html = tek sayfalık "site yenileniyor" bilgilendirme sayfası
+  [~] hakkimizda / hizmetler / iletisim = ana sayfaya yönlendiriliyor
+      (dosyalardaki "GEÇİCİ YÖNLENDİRME" blokları)
+  [ ] Arka planda yapılacak: yenilenmiş site içeriği (bkz. aşağıdaki maddeler)
+
+  GEÇİCİ YAYINI KALDIRMA (yenileme bitince):
+      python3 scripts/gecici-yayini-kaldir.py       # 3 sayfadaki yönlendirmeler
+      # index.html: yenilenen ana sayfayı koyun, ya da eski sürüme dönün:
+      git checkout 2dea786 -- index.html
+      # gecici-sayfa.html depoda kalsın; ileride tekrar gerekirse hazır
+      # bu bölümü [x] yapıp tarihli girdiye taşıyın
 
 İçerik / Eksik veriler
   [ ] Hero istatistik kutuları: "XX" yerine gerçek rakamlar

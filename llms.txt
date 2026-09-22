@@ -2,6 +2,12 @@
 
 > İzmir merkezli hukuk bürosu. Av. Mert Aydede tarafından bireysel ve kurumsal müvekkillere gayrimenkul, iş, ceza, aile, sözleşmeler ve ticaret hukuku alanlarında hukuki danışmanlık ve dava vekilliği hizmeti sunulmaktadır.
 
+## Durum (geçici)
+- 2026-09-22 itibarıyla web sitesi yenileme çalışması nedeniyle geçici olarak
+  tek sayfaya indirilmiştir. https://aydedehukuk.com/ adresinde yalnızca
+  iletişim ve adres bilgilerini içeren bilgilendirme sayfası yayındadır.
+- Aşağıdaki iletişim bilgileri güncel ve geçerlidir.
+
 ## Avukat
 - Ad: Av. Mert Aydede
 - Unvan: Avukat
@@ -12,7 +18,6 @@
 - Adres: Konak Mah. Milli Kütüphane Cad. No: 19, Tibaş İş Hanı, Kat: 2, 205, Konak/İzmir, Türkiye
 - Telefon (cep): +90 (530) 065 15 79
 - E-posta: av.mertaydede@aydedehukuk.com
-- E-posta (alternatif): av.mertaydede@outlook.com
 - KEP (Kayıtlı Elektronik Posta): mert.aydede@hs02.kep.tr
 - Çalışma saatleri: Pazartesi – Cumartesi, 09:00 – 18:00
 - Web sitesi: https://aydedehukuk.com
@@ -26,10 +31,10 @@
 - Ticaret ve Şirketler Hukuku
 
 ## Sayfalar
-- [Ana Sayfa](https://aydedehukuk.com/): Genel tanıtım, uzmanlık alanları ve iletişim özeti
-- [Hakkımızda](https://aydedehukuk.com/hakkimizda.html): Av. Mert Aydede ve büro hakkında bilgi
-- [Çalışma Alanları](https://aydedehukuk.com/hizmetler.html): Hizmet verilen hukuk alanlarının ayrıntısı
-- [İletişim](https://aydedehukuk.com/iletisim.html): İletişim bilgileri ve randevu talebi
+- [Ana Sayfa](https://aydedehukuk.com/): Geçici bilgilendirme sayfası — site yenilenme
+  aşamasındadır; iletişim, adres ve çalışma saatleri bilgilerini içerir
+- hakkimizda.html, hizmetler.html ve iletisim.html şu anda ana sayfaya
+  yönlendirilmektedir; yenileme tamamlandığında yeniden yayına alınacaktır
 
 ## Notlar
 - Yapısal veri: Her sayfanın <head> bölümünde Schema.org "Attorney" tipinde JSON-LD bulunur.

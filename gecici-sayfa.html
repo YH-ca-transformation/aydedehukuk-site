@@ -6,6 +6,9 @@
     <title>Aydede Hukuk Bürosu | İletişim Bilgileri</title>
     <meta name="description" content="Aydede Hukuk Bürosu web sitesi yenileme aşamasındadır. Av. Mert Aydede'ye ulaşmak için telefon, e-posta, KEP ve büro adres bilgileri." />
     <link rel="canonical" href="https://aydedehukuk.com/" />
+    <!-- Bu dosya, ana sayfada yayınlanan geçici sayfanın saklı kopyasıdır;
+         arama motorlarında ayrı bir sayfa olarak listelenmemesi için noindex. -->
+    <meta name="robots" content="noindex, follow" />
     <!-- Favicon / site simgesi -->
     <link rel="icon" href="favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png" />
@@ -117,7 +120,9 @@
 }
     </script>
     <!--
-      GEÇİCİ SAYFA — site yenileme çalışması süresince yayındadır.
+      GEÇİCİ SAYFA ŞABLONU — index.html olarak yayınlanan sayfanın saklı kopyası.
+      Yeniden yayına almak için:  cp gecici-sayfa.html index.html
+      (ardından index.html içindeki "robots noindex" satırını silin)
       Tam sürüm ana sayfa git geçmişindedir (bkz. CHANGELOG.txt "BEKLEYEN İŞLER").
       Geri alma:  git checkout 2dea786 -- index.html
       Bu dosya kendi kendine yeterlidir: styles.css / script.js kullanmaz.

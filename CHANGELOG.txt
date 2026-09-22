@@ -9,7 +9,7 @@ Amaç     : Sitede yapılan tüm değişikliklerin kronolojik kaydı.
 2026-09-22
 ----------
 
-[İçerik] Geçici tek sayfa: "site yenilenme aşamasındadır" + iletişim bilgileri
+[İçerik] Geçici tek sayfa: "site yenilenme aşamasındadır" + iletişim bilgileri  (PR #9)
   - index.html, yenileme çalışması süresince yayında kalacak tek sayfalık
     bilgilendirme sayfasıyla değiştirildi: bilgilendirme şeridi, logo,
     "Web sitemiz yenileniyor" başlığı ve iletişim kartı
